@@ -34,5 +34,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "Baggage storage's frontend realized with React.js",
+  "main": "index.js",
+  "repository": "https://github.com/nadiaGincoff/baggage-storage-front.git",
+  "author": "nadiaGinc <nadia.gincoff@gmail.com>",
+  "license": "MIT"
 }
