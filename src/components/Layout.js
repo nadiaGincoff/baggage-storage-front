@@ -5,25 +5,26 @@ import { makeStyles, useTheme } from "@material-ui/core/styles"
 import Header from "./Header"
 import PersistentDrawerRight from "./PersistentDrawerRight"
 import Passengers from "./passengers/Passengers"
-import CreatePassenger from "./passengers/CreatePassenger"
+import PassengerForm from "./passengers/PassengerForm"
 import Baggages from "./baggages/Baggages"
-
-const drawerWidth = 240
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // display: "flex",
+    display: "flex",
     height: "100vh",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
   },
   content: {
     paddingTop: "15vh",
     padding: "1rem",
     width: "100%",
-    alignContent: "left",
-    justifyContent: "center",
-    // flexGrow: 1,
-    // margin: drawerWidth,
-    // marginTop: drawerWidth,
+    borderRadius: 15,
+    maxWidth: "100vh",
+    height: "100vh",
+    paddingBottom: "5vh",
+    boxShadow: `0px 2px 4px -1px #0000`,
   },
 }))
 
@@ -57,7 +58,8 @@ export default function PersistentDrawerLeft() {
           <Switch>
             <Route exact path="/" component={Passengers} />
             <Route exact path="/passengers" component={Passengers} />
-            <Route exact path="/new-passenger" component={CreatePassenger} />
+            <Route exact path="/new-passenger" component={PassengerForm} />
+            <Route exact path="/get-passenger/:id" component={PassengerForm} />
             <Route exact path="/baggages" component={Baggages} />
           </Switch>
         </main>

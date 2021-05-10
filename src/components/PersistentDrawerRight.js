@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const options = {
-  1: `Pasajeros`,
+  1: `Passengers`,
   2: `Storage`,
 }
 

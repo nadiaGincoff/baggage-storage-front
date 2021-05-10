@@ -11,11 +11,32 @@ const axiosInstance = axios.create({
 })
 
 // Home
-API.getHome = () => axiosInstance.get("/")
+API.getHome = () => axiosInstance.get(`/`)
 
-// Clients
-API.newClient = () => axiosInstance.post("/new-client")
+// Baggages 
+API.getAllBaggages = () => axiosInstance.get(`/baggages`)
 
-API.getAllPassengers = () => axiosInstance.get("/passengers")
+// Passengers
+API.getAllPassengers = () => axiosInstance.get(`/passengers`)
+
+API.newPassenger = ({ name, flightNumber, firstItem, secondItem, thirdItem }) =>
+  axiosInstance.post("/new-passenger", null, {
+    params: { name, flightNumber, firstItem, secondItem, thirdItem },
+  })
+
+API.getPassengerById = (id) => axiosInstance.get(`/get-passenger/${id}`)
+
+API.editPassenger = ({ id, name, flightNumber, firstItem, secondItem, thirdItem }) =>
+  axiosInstance.post(`/edit-passenger/${id}`, null, {
+    params: {
+      name,
+      flightNumber,
+      firstItem,
+      secondItem,
+      thirdItem,
+    },
+  })
+
+API.deletePassenger = (id) => axiosInstance.post(`/delete-passenger/${id}`)
 
 export default API
