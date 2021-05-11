@@ -9,7 +9,7 @@ In the project directory, you can run:
 
 ### `yarn start`
 
-Previously, run _yarn install_ script for install project dependencies
+Previously, install [server](https://github.com/nadiaGincoff/baggage-storage-back) and run _yarn install_ script for install project dependencies
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
